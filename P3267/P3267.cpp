@@ -21,12 +21,17 @@ void dfs(int u,int fa){
         int v=G[u][i];
         if(v==fa) continue;
         dfs(v,u);
+    }
+    for(int i=0;i<G[u].size();i++){
+        int v=G[u][i];
+        if(v==fa) continue;
         for(int j=d;j>=0;j--){
             f[u][j]=min(min(f[u][j]+g[v][j],g[u][j+1]+f[v][j+1]),f[u][j]+f[v][j+1]);
         }
         for(int j=d;j>=0;j--){
             f[u][j]=min(f[u][j+1],f[u][j]);
         }
+        g[u][0]=f[u][0];
         for(int j=1;j<=d+1;j++){
             g[u][j]=g[u][j]+g[v][j-1];
         }
@@ -49,8 +54,7 @@ int main(){
     }
     scanf("%d",&m);
     for(int i=1;i<=m;i++){
-        int x;
-        scanf("%d",&x);b[x]=1;
+        int x;scanf("%d",&x);b[x]=1;
     }
     for(int i=1;i<n;i++){
         int u,v;
@@ -59,6 +63,11 @@ int main(){
         G[v].push_back(u);
     }
     memset(f,0x3f,sizeof(f));
-    dfs(1,0);
+    dfs(1,1);
+    // int ans=1e9;
+    // for(int i=0;i<=d;i++)
+    //     ans=min(ans,f[1][i]);
+    // printf("%d\n",ans);
+    printf("%d\n",f[1][0]);
     return 0;
 }
