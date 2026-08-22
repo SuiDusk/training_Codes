@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 #include <cmath>
 #include <cstdio>
 using namespace std;
@@ -26,9 +27,8 @@ int main()
                 if (++c[j] > j)
                 {
                     while (--cnt[j][a[++l[j]]] != 0)
-                    {
-                        c[j]--;
-                    }
+                        ;
+                    c[j]--;
                 }
             }
         }
