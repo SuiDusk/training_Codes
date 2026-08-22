@@ -2,7 +2,9 @@
 *.obj
 *.o
 *.ilk      # 增量链接器文件[reference:3][reference:4][reference:5]
+**/*.ilk
 *.pdb      # 程序调试数据库文件[reference:6][reference:7][reference:8]
+**/*.pdb
 *.idb
 *.pch      # 预编译头文件[reference:9][reference:10]
 *.exp
@@ -10,6 +12,7 @@
 
 # 最终生成的二进制文件
 *.exe
+**/*.exe
 *.dll
 *.so
 *.dylib
