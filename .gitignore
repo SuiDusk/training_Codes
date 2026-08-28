@@ -21,3 +21,59 @@
 .vscode/   # 忽略 VS Code 的本地配置[reference:11][reference:12]
 build/     # 忽略常见的构建输出目录[reference:13]
 ipch/      # 忽略 Visual C++ 缓存文件[reference:14][reference:15]
+
+
+
+# 编译输出目录
+bin/
+obj/
+out/
+
+# 用户特定设置
+*.user
+*.userosscache
+*.userprefs
+*.suo
+*.vs/
+.vs/
+
+# 调试符号和数据库
+*.pdb
+*.mdb
+*.ilk
+*.idb
+*.ipdb
+
+# 打包和发布文件
+*.nupkg
+*.snupkg
+*.symbols.nupkg
+
+# 测试结果
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.coveragehtml
+
+# 日志文件
+*.log
+
+# 备份文件
+*~
+*.bak
+
+# 操作系统元数据
+Thumbs.db
+.DS_Store
+
+# 代码分析
+*.cache
+*.generated.cache
+
+# 项目特定临时文件
+*.tmp
+*.temp
+
+# 全局工具存储
+.nuget/
